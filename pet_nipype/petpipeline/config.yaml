@@ -1,0 +1,27 @@
+environment:
+  experiment_dir: '/indirect/users/avneetkaur/Desktop/ColumbiaTest/'
+  output_dir: 'derivatives/'
+  working_dir: 'working_dir/'
+  data_dir: "/indirect/users/avneetkaur/Desktop/Columbia/rawdata/"
+
+motion_correction:
+  cost: 'mutualinfo'
+  dof: 6
+  save_plots: True
+
+coregistration:
+  dof: 6
+  sep: [2,4]
+
+reconall:
+  directive: 'all'
+
+partial_volume_correction:
+  psf: 4
+  default_seg_merge: True
+  auto_mask: !!python/tuple [1, 0.1]
+  km_ref: ['8 47']
+  km_hb: ['11 12 50 51']
+  no_rescale: True
+  save_input: True
+
