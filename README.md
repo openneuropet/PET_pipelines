@@ -7,4 +7,4 @@ Use PETsurfer powered by python - a pipeline by [Vincent Beliveau](https://githu
 
 ## [pet_nipype](https://github.com/openneuropet/PET_pipelines/tree/main/pet_nipype)
 
-PET pipeline using nipype workflows
+PET pipeline using nipype workflows - brang to you by [Martin Norgaard](https://github.com/mnoergaard)
