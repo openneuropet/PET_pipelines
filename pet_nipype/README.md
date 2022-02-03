@@ -134,7 +134,7 @@ We'll be using Anaconda to install the latest version of Python version and its 
 To download anaconda, in the terminal, run the following command:
 
 ```
-curl -O- https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
 ```
 
 To install, run:
@@ -158,7 +158,7 @@ This will then generate the necessary commands needed for installation as shown 
 For testing purposes, we've used Ubuntu 20.4 "Focal Fossa".
 
 ```
-wget -O- http://neuro.debian.net/lists/focal.de-fzj.full | tee /etc/apt/sources.list.d/neurodebian.sources.list
+wget -O http://neuro.debian.net/lists/focal.de-fzj.full | tee /etc/apt/sources.list.d/neurodebian.sources.list
 apt-key adv --recv-keys --keyserver hkps://keyserver.ubuntu.com 0xA5D32F012649A5A9
 ```
 
@@ -215,7 +215,7 @@ To download and install freesurfer, visit the [downloads](https://surfer.nmr.mgh
 On a terminal, run the following command with the copied link address following the -O- flag to start the download process:
 
 ```
-curl -O- https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.2.0/freesurfer-linux-ubuntu18_amd64-7.2.0.tar.gz
+curl -O https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.2.0/freesurfer-linux-ubuntu18_amd64-7.2.0.tar.gz
 ```
 
 Then run the following command to unzip and install freesurfer: 
