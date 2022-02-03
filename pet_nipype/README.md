@@ -201,7 +201,7 @@ export FSLDIR PATH
 Source the `~/.bashrc` by running the following command on the terminal:
 
 ```
-source `~/.bashrc`
+source ~/.bashrc
 ```
 
 In order to verify that the installation has been completed successfully, on a terminal run the command `fsl`. 
