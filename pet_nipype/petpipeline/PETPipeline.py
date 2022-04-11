@@ -223,7 +223,7 @@ class PETPipeline:
                                                 (reconall, coregistration, [('T1','reference_file')]),
                                                 (motion_correction, partial_volume_correction, [('out_file','in_file')]),
                                                 (infosource, create_subjects_dir_pvc, [('subject_id', 'subject_id'),('session_id', 'session_id')]),
-                                                (gtmseg, partial_volume_correction, [('gtm_file','segmentation')]),
+                                                (gtmseg, partial_volume_correction, [('out_file','segmentation')]),
                                                 (coregistration, datasink, [('out_lta_file', 'coregistration')]),
                                                 (coregistration, partial_volume_correction, [('out_lta_file','reg_file')]),
                                                 (create_subjects_dir_pvc,partial_volume_correction, [('directory','pvc_dir')]),
