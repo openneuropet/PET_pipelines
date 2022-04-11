@@ -234,7 +234,7 @@ class PETPipeline:
                                                 (infosource, create_subjects_dir_mrtm1, [('subject_id', 'subject_id'),('session_id', 'session_id')]),
                                                 (create_subjects_dir_mrtm1, kinetic_modelling ,[('directory', 'glm_dir')]),
                                                 (partial_volume_correction, kinetic_modelling ,[('hb_nifti','in_file')]),
-                                                (kinetic_modelling, combine_outputs_, [('k2p','k2p_file')]),
+                                                (kinetic_modelling, combine_outputs_, [('out_file','k2p_file')]),
                                                 (midframes, combine_outputs_, [('time_file','time_file')]),
                                                 (partial_volume_correction, combine_outputs_, [('ref_file','ref_file')]),
                                                 (combine_outputs_, kinetic_modelling_, [('input_to_mrtm2','mrtm2')]),
