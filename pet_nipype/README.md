@@ -90,7 +90,7 @@ To get docker up and running on your system, you can follow along the instructio
 If you have docker set up on your system, then on a terminal run the following command to set up and run a container in an interactive mode. You can also attach the data you want to run the pipeline on, to your container using the `-v` flag as shown. This container uses an `ubuntu` image. :
 
 ```
-docker container run  -v <path_to_data_in_host_machine>:<path_to_data_in_container>  --name <name_of_container> -it ubuntu
+docker container run --platform linux/x86_64 -v <path_to_data_in_host_machine>:<path_to_data_in_container>  --name <name_of_container> -it ubuntu 
 ```
 
 This will run a new container with the specified name and allow you to execute commands on a terminal inside the container. 
