@@ -1,8 +1,8 @@
 environment:
-  experiment_dir: '/indirect/users/avneetkaur/Desktop/ColumbiaTest/'
-  output_dir: 'derivatives/'
+  experiment_dir: 'experiment_dir/'
+  output_dir: 'output_dir/'
   working_dir: 'working_dir/'
-  data_dir: "/indirect/users/avneetkaur/Desktop/Columbia/rawdata/"
+  data_dir: "data_dir/"
 
 motion_correction:
   cost: 'mutualinfo'

@@ -17,21 +17,11 @@ python3-pip \
 
 # next we collect all of the other dependencies we need
 
-# collect and install anaconda
-#RUN curl -O https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh && \
-#bash Anaconda3-2021.11-Linux-x86_64.sh -b -p $HOME/anaconda3 
-
 # install freesurfer
 RUN curl -O https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/7.2.0/freesurfer-linux-ubuntu18_amd64-7.2.0.tar.gz && \
 tar -C /usr/local -xzvf /freesurfer*
 
 # now we configure our paths so our installs are reachable
-
-# set anaconda onto path
-#RUN echo PATH=\$HOME/anaconda3/bin:\${PATH} >> $HOME/.bashrc \
-#echo "CONDA_AUTO_ACTIVATE=true" >> ~/.bashrc && \
-#source ~/.bashrc 
-#conda init
 
 # set up fsl path
 RUN echo -e \ 
@@ -51,8 +41,16 @@ cd nipype && \
 pip install .
 
 # Make processing directories
-RUN mkdir experiment_dir && mkdir output_dir && mkdir working_dir && mkdir data_dir
+RUN mkdir /experiment_dir &&  \
+mkdir /output_dir && \
+mkdir /working_dir && \
+mkdir data_dir
 
-COPY . pet_nipype
+COPY . pet_nipype 
+COPY petpipeline/config.yaml /config.yaml
 
+RUN cd pet_nipype/ && pip install .
 
+ENTRYPOINT [ "python3", "/pet_nipype/petpipeline/main.py" ]
+
+CMD [ "--config", "/config.yaml", "--output_dir", "/output_dir", "--working_dir", "/working_dir", "--experiment_dir", "/experiment_dir", "--data_dir", "/data_dir" ] 
