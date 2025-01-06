@@ -271,15 +271,16 @@ Now that we have all the requirements in place, we can go ahead and install the 
 Clone the repository using 
 
 ```
-git clone https://github.com/openneuropet/petpipeline.git
+git clone https://github.com/openneuropet/pet_pipelines.git
 ```
 
-Install python packages using requirements.txt
+Install python packages using pip and setup.py
 
 This should install python packages `pybids` and `pyyaml`
 
-``` 
-pip install requirements.txt
+```
+cd PET_piplines/pet_nipype/ 
+pip install -e .
 ```
 
 Specify the required directories and configuration parameters for the different preprocessing steps in the `config.yaml` file as explained in the <a href="#configuration"> configuration section. </a>
